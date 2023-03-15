@@ -33,6 +33,7 @@ export default function NameInput({
           type="text"
         />
         <button
+          role="submit button"
           onClick={() => handleNameSubmit()}
           className="right-4 absolute top-[22%] lg:top-[28%]"
         >
