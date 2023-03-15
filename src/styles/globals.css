@@ -17,3 +17,7 @@ body {
 .home-bg-image {
   background-image: url("../../public/background-portfolio.png");
 }
+
+.nation-item:hover .tool-tip {
+  display: block;
+}

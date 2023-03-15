@@ -94,10 +94,11 @@ export default function Check() {
           handleNameSubmit={() => handleNameSubmit(name)}
         />
         <NationWrapper>
-          {countries.map((country: Country) => (
+          {countries.map((country: Country, index) => (
             <NationItem
+              index={index}
               nation={transformCountryID(country.country_id)}
-              percentage={`${transformPercentage(country.probability)}%`}
+              percentage={`${transformPercentage(country.probability)}`}
               img_src={`https://flagcdn.com/w160/${country.country_id}.png`}
               key={country.country_id}
             />
