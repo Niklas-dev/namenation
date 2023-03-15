@@ -11,11 +11,11 @@ const kufam = Kufam({ weight: "400", style: "normal", subsets: ["latin"] });
 export default function CallToAction() {
   return (
     <div className="flex flex-col items-center  pt-4">
-      <h3
+      <h2
         className={`${kufam.className} text-[1rem] md:text-[1.4rem]  lg:text-[1.8rem] text-[#E2E2E2] text-center  w-[18rem] md:w-[28rem] lg:w-[40rem]`}
       >
         Check the national background of your name, the related age and more!
-      </h3>
+      </h2>
 
       <Link
         href="/check"
