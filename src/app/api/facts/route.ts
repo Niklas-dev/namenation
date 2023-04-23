@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 export async function GET(request: Request) {
   const GPT_NAME_FACTS: Array<string> = [
     "The most popular name in the world is Muhammad.",
@@ -27,7 +29,5 @@ export async function GET(request: Request) {
     fact: randomFact,
   };
 
-  return new Response(JSON.stringify(jsonResponse), {
-    headers: { "Content-Type": "application/json" },
-  });
+  return NextResponse.json(jsonResponse);
 }
