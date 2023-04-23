@@ -173,12 +173,14 @@ export default function Check() {
             {fact}
           </div>
         </div>
-        <Link
+        <a
           href={"https://github.com/Niklas-dev/namenation"}
           className={`${poppins.className} text-white underline py-4`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          star on github
-        </Link>
+          star it on github
+        </a>
       </div>
     </div>
   );
