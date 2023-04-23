@@ -1,17 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Kufam } from "next/font/google";
+import { Poppins } from "next/font/google";
 import NationWrapper from "./components/NationWrapper";
 import { AgeData, Country, CountryData, FactData } from "@/types/types";
 import NationItem from "./components/NationItem";
 import NameInput from "./components/NameInput";
-const kufam_bold = Kufam({
+import Link from "next/link";
+const poppins_bold = Poppins({
   weight: "700",
   style: "normal",
   subsets: ["latin"],
 });
-const kufam = Kufam({ weight: "400", style: "normal", subsets: ["latin"] });
+const poppins = Poppins({ weight: "400", style: "normal", subsets: ["latin"] });
 export default function Check() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
@@ -94,7 +95,7 @@ export default function Check() {
     <div className="h-screen w-screen flex flex-row justify-center bg-[#181818] overflow-y-scroll overflow-x-hidden">
       <div className="flex flex-col items-center pt-20">
         <h1
-          className={`${kufam_bold.className} text-center text-[2.5rem] lg:text-[4rem] text-[#E2E2E2]`}
+          className={`${poppins_bold.className} text-center text-[2.5rem] lg:text-[4rem] text-[#E2E2E2]`}
         >
           NameNation
         </h1>
@@ -119,7 +120,7 @@ export default function Check() {
                 </NationWrapper>
               ) : (
                 <div
-                  className={`${kufam_bold.className} h-[29.95%] w-full flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
+                  className={`${poppins_bold.className} h-[29.95%] w-full flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
                 >
                   Are you sure that&apos;s a name?
                 </div>
@@ -147,14 +148,14 @@ export default function Check() {
           )
         ) : (
           <p
-            className={`${kufam_bold.className} h-[29.95%] flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
+            className={`${poppins_bold.className} h-[29.95%] flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
           >
             Enter a name to get started.
           </p>
         )}
         {age >= 1 && (
           <div
-            className={`${kufam_bold.className} mt-10 h-20 w-1/2 py-2 px-3 rounded-xl text-[1rem] lg:text-[1.25rem] bg-[#222222]  lg:w-[32rem] text-[#D1D1D1] text-center flex flec-col items-center justify-center gap-1`}
+            className={`${poppins_bold.className} mt-10 h-20 w-1/2 py-2 px-3 rounded-xl text-[1rem] lg:text-[1.25rem] bg-[#222222]  lg:w-[32rem] text-[#D1D1D1] text-center flex flec-col items-center justify-center gap-1`}
           >
             From your name you could be {age} years old.
           </div>
@@ -162,16 +163,22 @@ export default function Check() {
 
         <div className="flex flex-col  justify-center items-center mt-8 pb-4 w-full">
           <h2
-            className={`${kufam_bold.className} text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
+            className={`${poppins_bold.className} text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
           >
             Fact for you
           </h2>
           <div
-            className={`${kufam.className} flex justify-center items-center lg:h-fit text-[1.1rem] bg-[#222222] w-1/2 lg:w-[32rem] h-fit text-[#D1D1D1] text-center rounded-lg  py-2 px-5`}
+            className={`${poppins.className} flex justify-center items-center lg:h-fit text-[1.1rem] bg-[#222222] w-1/2 lg:w-[32rem] h-fit text-[#D1D1D1] text-center rounded-lg  py-2 px-5`}
           >
             {fact}
           </div>
         </div>
+        <Link
+          href={"https://github.com/Niklas-dev/namenation"}
+          className={`${poppins.className} text-white underline py-4`}
+        >
+          star on github
+        </Link>
       </div>
     </div>
   );
