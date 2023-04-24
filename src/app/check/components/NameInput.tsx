@@ -25,7 +25,11 @@ export default function NameInput({
       </label>
       <div className="relative">
         <input
-          onSubmit={() => handleNameSubmit()}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleNameSubmit();
+            }
+          }}
           onChange={(e) => setName(e.target.value)}
           maxLength={35}
           className={`${kufam_bold.className} relative text-center w-[22rem] lg:w-[42rem] rounded-xl bg-[#E2E2E2] shadow-lg outline-none text-[1.5rem] lg:text-[2rem] px-4 pt-1`}
