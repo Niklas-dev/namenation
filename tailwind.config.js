@@ -14,6 +14,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["var(--font-poppins)"],
+      },
       colors: {
         background: "#181818",
         primary: "#212121",

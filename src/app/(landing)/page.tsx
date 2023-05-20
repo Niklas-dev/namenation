@@ -1,14 +1,5 @@
-import { Kufam } from "next/font/google";
 import CallToAction from "./components/CallToAction";
 import Headline from "./components/Headline";
-import styles from "./page.module.css";
-
-const kufam_bold = Kufam({
-  weight: "700",
-  style: "normal",
-  subsets: ["latin"],
-});
-const kufam = Kufam({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export default async function Home() {
   return (

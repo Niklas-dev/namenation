@@ -1,12 +1,4 @@
 import React from "react";
-import { Kufam } from "next/font/google";
-
-const kufam_bold = Kufam({
-  weight: "700",
-  style: "normal",
-  subsets: ["latin"],
-});
-const kufam = Kufam({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export default function NameInput({
   handleNameSubmit,
@@ -18,7 +10,7 @@ export default function NameInput({
   return (
     <div className="flex flex-col pt-20">
       <label
-        className={`${kufam_bold.className} text-[1.15rem] lg:text-[1.25rem] text-[#E2E2E2] text-center`}
+        className={`font-poppins font-bold text-[1.15rem] lg:text-[1.25rem] text-[#E2E2E2] text-center`}
         htmlFor="search"
       >
         Your Name
@@ -32,11 +24,12 @@ export default function NameInput({
           }}
           onChange={(e) => setName(e.target.value)}
           maxLength={35}
-          className={`${kufam_bold.className} relative text-center w-[22rem] lg:w-[42rem] rounded-xl bg-[#E2E2E2] shadow-lg outline-none text-[1.5rem] lg:text-[2rem] px-4 pt-1`}
+          className={`font-poppins font-bold relative text-center w-[22rem] lg:w-[42rem] rounded-xl bg-[#E2E2E2] shadow-lg outline-none text-[1.5rem] lg:text-[2rem] px-4 pt-1`}
           id="search"
           type="text"
         />
         <button
+          aria-label="submit"
           role="submit button"
           onClick={() => handleNameSubmit()}
           className="right-4 absolute top-[22%] lg:top-[28%]"

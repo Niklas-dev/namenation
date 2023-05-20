@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Poppins } from "next/font/google";
 import NationWrapper from "./components/NationWrapper";
 import { AgeData, Country, CountryData, FactData } from "@/types/types";
 import NationItem from "./components/NationItem";
@@ -11,12 +10,8 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import AgeDisplay from "./components/AgeDisplay";
 import FactDisplay from "./components/FactDisplay";
 import StarOnGithub from "./components/StarOnGithub";
-const poppins_bold = Poppins({
-  weight: "700",
-  style: "normal",
-  subsets: ["latin"],
-});
-const poppins = Poppins({ weight: "400", style: "normal", subsets: ["latin"] });
+import Headline from "./components/Headline";
+
 export default function Check() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
@@ -98,11 +93,7 @@ export default function Check() {
   return (
     <div className="h-screen w-screen flex flex-row justify-center bg-[#181818] overflow-y-scroll overflow-x-hidden">
       <div className="flex flex-col items-center pt-20">
-        <h1
-          className={`${poppins_bold.className} text-center text-[2.5rem] lg:text-[4rem] text-[#E2E2E2]`}
-        >
-          NameNation
-        </h1>
+        <Headline />
         <NameInput
           setName={(input: string) => setName(input)}
           handleNameSubmit={() => handleNameSubmit(name)}
@@ -124,7 +115,7 @@ export default function Check() {
                 </NationWrapper>
               ) : (
                 <div
-                  className={`${poppins_bold.className} h-[29.95%] w-full flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
+                  className={`font-poppins font-bold h-[29.95%] w-full flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
                 >
                   Are you sure that&apos;s a name?
                 </div>
@@ -135,7 +126,7 @@ export default function Check() {
           )
         ) : (
           <p
-            className={`${poppins_bold.className} h-[29.95%] flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
+            className={`font-poppins font-bold h-[29.95%] flex flex-col items-center justify-center text-[1rem]  lg:text-[1.25rem]  text-[#D1D1D1] text-center`}
           >
             Enter a name to get started.
           </p>

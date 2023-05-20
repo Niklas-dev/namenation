@@ -1,13 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Kufam } from "next/font/google";
+
 import Image from "next/image";
-const kufam_bold = Kufam({
-  weight: "700",
-  style: "normal",
-  subsets: ["latin"],
-});
-const kufam = Kufam({ weight: "400", style: "normal", subsets: ["latin"] });
+
 export default function NationItem({
   index,
   nation,
@@ -47,10 +42,10 @@ export default function NationItem({
   }, []);
   return (
     <li
-      className={`${kufam_bold.className} nation-item bg-[#222222] cursor-pointer relative h-14 w-72 lg:w-72 flex flex-row justify-between items-center py-2 px-3 rounded-xl`}
+      className={`font-poppins font-bold nation-item bg-[#222222] cursor-pointer relative h-14 w-72 lg:w-72 flex flex-row justify-between items-center py-2 px-3 rounded-xl`}
     >
       <h3
-        className={`${kufam_bold.className} text-[1.15rem] pt-1 text-[#D1D1D1] hidden lg:block`}
+        className={`font-poppins font-bold text-[1.15rem] pt-1 text-[#D1D1D1] hidden lg:block`}
       >
         {index + 1}.
       </h3>
@@ -62,12 +57,12 @@ export default function NationItem({
         alt={`flag_${nation}`}
       />
       <h3
-        className={`${kufam_bold.className} text-[1.15rem] pt-1 text-[#D1D1D1]  w-24 overflow-clip text-ellipsis`}
+        className={`font-poppins font-bold text-[1.15rem] pt-1 text-[#D1D1D1]  w-24 overflow-clip text-ellipsis`}
       >
         {nation}
       </h3>
       <p
-        className={`${kufam_bold.className} text-[1.25rem] ${color} bg-[#2E2E2E] rounded-xl px-2 pt-2 pb-[0.25rem]`}
+        className={`font-poppins font-bold text-[1.25rem] ${color} bg-[#2E2E2E] rounded-xl px-2 pt-2 pb-[0.25rem]`}
       >
         {percentage}%
       </p>

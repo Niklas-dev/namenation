@@ -1,5 +1,13 @@
 import "./../styles/globals.css";
 
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
 export const metadata = {
   title: "NameNation | Learn the background of your name!",
   description:
@@ -14,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg bg-[#181818]">{children}</body>
+      <body className={`${poppins.variable} bg-[#181818]`}>{children}</body>
     </html>
   );
 }
