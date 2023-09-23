@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import NationWrapper from "./components/NationWrapper";
+import NationWrapper from "../components/NationWrapper";
 import { AgeData, Country, CountryData, FactData } from "@/types/types";
-import NationItem from "./components/NationItem";
-import NameInput from "./components/NameInput";
+import NationItem from "../components/NationItem";
+import NameInput from "../components/NameInput";
 import Link from "next/link";
-import LoadingSpinner from "./components/LoadingSpinner";
-import AgeDisplay from "./components/AgeDisplay";
-import FactDisplay from "./components/FactDisplay";
-import StarOnGithub from "./components/StarOnGithub";
-import Headline from "./components/Headline";
+import LoadingSpinner from "../components/LoadingSpinner";
+import AgeDisplay from "../components/AgeDisplay";
+import FactDisplay from "../components/FactDisplay";
+import StarOnGithub from "../components/StarOnGithub";
+import Headline from "../components/Headline";
 
 export default function Check() {
   const [name, setName] = useState("");
