@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const revalidate = 0;
+
 export async function GET(request: Request) {
   const GPT_NAME_FACTS: Array<string> = [
     "The most popular name in the world is Muhammad.",
